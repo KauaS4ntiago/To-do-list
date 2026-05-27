@@ -1,6 +1,6 @@
-function Footer() {
+function Footer({ name }) {
 
-    return <p>Made with React</p>
+    return <p>Made with React by {name}</p>
 
 }
 

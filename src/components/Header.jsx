@@ -1,6 +1,6 @@
-function Header() {
+function Header({ title }) {
 
-    return <h1>Minhas tarefas</h1>
+    return <h1>{title}</h1>
 
 }
 
