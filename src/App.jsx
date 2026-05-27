@@ -1,12 +1,13 @@
-// src/App.jsx
+import Header from './components/Header'
+import Footer from './components/Footer'
 
 function App() {
-  // Isso é JSX — parece HTML, mas é JavaScript
   return (
-    <div className="container">
-      <h1>Minhas Tarefas</h1>
-      <p>Em breve, nossa lista vai aparecer aqui.</p>
-    </div>
+      <div className="container">
+        <Header/>
+        <p>Em breve, nossa lista vai aparecer aqui.</p>
+        <Footer/>
+      </div>  
   )
 }
 
