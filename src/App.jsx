@@ -6,23 +6,33 @@ import { useState } from 'react'
 
 function App() {
 
-  const [tasks, setTasks] = useState([  
+  const [tasks, setTasks] = useState([
   { id: 1, text: 'Learn JSX', done: false },
   { id: 2, text: 'Learn components', done: true },
   { id: 3, text: 'Learn props', done: true },])
 
-    function addTask(text) {
+  function addTask(text) {
       const newTask = { id: Date.now(), text: text, done: false }
       setTasks([...tasks, newTask])
+  }
+
+  function deleteTask(id) {
+      setTasks(tasks.filter((task) => task.id !== id))
+  }
+
+  function toggleTask(id) {
+      setTasks(tasks.map((task) =>
+        task.id === id ? { ...task, done: !task.done } : task
+      ))
   }
 
   return (
       <div className="container">
         <Header title="Minhas tarefas"/>
         <TaskForm onAdd={addTask}/>
-        <TaskList tasks={tasks}/>
+        <TaskList tasks={tasks} onToggle={toggleTask} onDelete={deleteTask}/>
         <Footer name="Kauã"/>
-      </div>  
+      </div>
   )
 }
 
