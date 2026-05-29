@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f1efe8;
+    font-family: sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 40px 16px;
+}
+
+.container {
+  width: 100%;
+  max-width: 480px;
+}
+
+.header {
+    margin-bottom: 24px;
+}
+
+.header h1 {
+    font-size: 22px;
+    font-weight: 500;
+    color: #2c2c2a;
+    margin-bottom: 4px;
+}
+
+.header p{
+    font-size: 13px;
+    color: #888780;
+}
+
+.form {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.form input {
+    flex: 1;
+    padding: 10px 14px;
+    font-size: 14px;
+    border: 0.5px solid #d3d1c7;
+    border-radius: 8px;
+    outline: none;
+    background: #ffffff;
+    color: #2c2c2a;
+}
+
+.form input:focus {
+    border-color: #534ab7;
+}
+
+.form button {
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    background: #534ab7;
+    color: #eeedfe;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+}
+
+.task-item {
+    background: #ffffff;
+    border: 0.5px solid #d3d1c7;
+    border-radius: 12px;
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.task-item.done {
+    border-color: #d3d1c7;
+}
+
+.task-item.done span {
+    text-decoration: line-through;
+    color: #888780;
+}
+
+.task-item:not(.done) {
+    border: 2px solid #534ab7;
+}
+
+.task-item span {
+    flex: 1;
+    font-size: 14px;
+    color: #2c2c2a;
+}
+
+.task-item button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #b4b2a9;
+    font-size: 16px;
+    padding: 4px;
+    border-radius: 8px;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #888780;
+}
+
+.task-item input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #534ab7;
+    cursor: pointer;
+    flex-shrink: 0;
+}

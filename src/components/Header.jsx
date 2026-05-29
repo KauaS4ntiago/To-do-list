@@ -1,6 +1,11 @@
 function Header({ title }) {
 
-    return <h1>{title}</h1>
+    return (
+        <div className="header">
+            <h1>{title}</h1>
+            <p>2 de 3 concluídas</p>
+        </div> 
+    )
 
 }
 
